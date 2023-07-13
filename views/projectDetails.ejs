@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/css/projectDetails.css">
+
+<section id="filter">
+    <form id="navbar" action="/issueTracker/filterProjectDetails/" method="post">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadio" value="Project Title" id="flexRadio1" required>
+            <label class="form-check-label" for="flexRadio1">Project Title</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadio" value="Project Description" id="flexRadio2" required>
+            <label class="form-check-label" for="flexRadio2">Project Description</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadio" value="Project Author" id="flexRadio3" required>
+            <label class="form-check-label" for="flexRadio3">Project Author</label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="background-color: #333; color: #fff;">Filter</button>
+    </form>
+</section>
+
+<main class="projectDetailsMain">
+    <% for(let project of projectDetails) { %>
+    <div class="projectDetailsDiv">
+        <h1><%= project.projectName%></h1>
+        <p><%= project.description%></p>
+        <p class="authorName">- <%= project.authorName %></p>
+
+        <% if(project.bugs){ %>
+        <h2 class="text-center" id="bugfound"><i class="fas fa-bug"></i> Bug Faced</h2>
+
+        <% for(let bug of project.bugs) { %>
+        <div class="bug">
+            <p><%= bug.issueName %></p>
+            <p><%= bug.issueDescription %></p>
+            <p><i>- <%= bug.authorName %></i></p>
+        </div>
+        <% } %>
+
+        <% } else { %>
+        <h2 class="text-center" id="nobug"><i class="fas fa-bug-slash"></i> No Bug Faced</h2>
+        <% } %>
+
+        <a href="/issueTracker/createAnIssue/<%= project._id %>" type="button" class="btn" style="background-color: #ff4d4d; color: #fff;">+ Raise an Issue</a>
+    </div>
+    <% } %>
+</main>
