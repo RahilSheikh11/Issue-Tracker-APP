@@ -1,0 +1,40 @@
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Issuetracker APP</title>
+     <link rel="stylesheet" href="/css/issueTracker.css">
+ </head>
+ 
+ <body>
+   <main class="mainProject" style="padding: 50px; font-size: 16px;">
+     <a href="/issueTracker/createProject" id="addProject" style="background-color: #36454F;">
+         <span>
+             <i class="fas fa-plus-circle" style="font-size: 24px; color: #fff;"></i> New Project
+         </span>
+     </a>
+ 
+     <% if (!addedProject) { %>
+         <div id="noProject">
+             <span>
+                 <i class="fas fa-file-excel" style="font-size: 24px;"></i> No Project Added
+             </span>
+         </div>
+     <% } else { %>
+         <% for (let project of addedProject) { %>
+             <div href="#" class="project">
+                 <h1><%= project.projectName %></h1>
+                 <p>- <%= project.authorName %></p>
+             </div>
+         <% } %>
+     <% } %>
+   </main>
+ </body>
+ 
+ </html>
+ 
+

@@ -1,0 +1,16 @@
+/* #issuetrackerfooter{
+    width:100vw;
+    margin-top:50%;
+} */
+
+
+#issuetrackerfooter {
+    width: 100vw;
+    margin-top: 50px;
+    background-color: #F5F7ED;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #6CAE75;
+  }
+  

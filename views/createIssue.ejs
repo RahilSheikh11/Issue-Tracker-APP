@@ -1,0 +1,22 @@
+
+
+
+<link rel="stylesheet" href="/css/createProject.css">
+
+<section class="createProjectSection">
+    <form class="createProjectForm" action="/issueTracker/createAnIssue/<%= issueId.id %>/addIssue" method="post">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label" style="color: black;">Issue Title</label>
+            <input type="text" name="issueName" class="form-control" id="exampleFormControlInput1" placeholder="Enter Issue Title" style="color: black; background-color: white;">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label" style="color: black;">Issue Description</label>
+            <textarea name="issueDescription" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Issue Description" style="color: black; background-color: white;"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label" style="color: black;">Issue Author</label>
+            <input type="text" name="authorName" class="form-control" id="exampleFormControlInput1" placeholder="Enter Author Name" style="color: black; background-color: white;">
+        </div>
+        <button type="submit" class="btn btn-danger w-100 my-3" style="background-color: #FF0000; color: white;">Create Issue</button>
+    </form>
+</section>

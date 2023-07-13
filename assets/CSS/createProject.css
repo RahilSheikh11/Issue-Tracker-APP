@@ -1,0 +1,50 @@
+/* .createProjectSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #818589;
+    padding: 25px 0;
+}
+
+.createProjectForm {
+    min-width: 500px;
+} */
+
+
+.createProjectSection {
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #F5F7ED;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #FF6F61;
+}
+
+.form-control {
+  border: 1px solid #B7D7D8;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.btn-primary {
+  background-color: #6CAE75;
+  border: none;
+  width: 100%;
+  margin-top: 1rem;
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: #3E4C4F;
+}
+
+.my-3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+  
