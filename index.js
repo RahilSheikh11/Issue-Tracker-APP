@@ -21,5 +21,5 @@ app.use('/', router)
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
->>>>>>> 19088dca9dca72b43470d5494692fad836ca9ce2
+
 app.listen(PORT, ()=>{console.log("connected to server : "+ PORT) })
